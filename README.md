@@ -2,7 +2,7 @@
 
 ### DISCLAIMER
 
-The use of this toolkit is not _officially_ supported. Before using it, ensure you understand SSL/TLS configuration for CM and CDH and review this entire doc ument. Also, make sure you pratice the use of the toolkit before using it in a critical environment.
+The use of this toolkit is not _officially_ supported. Before using it, ensure you understand SSL/TLS configuration for CM and CDH and review this entire document. Also, make sure you pratice the use of the toolkit before using it in a critical environment.
 
 If problems happen, resort to the [online Cloudera Documentation](http://www.cloudera.com/content/cloudera/en/documentation/core/latest/topics/sg_encryption.html) and complete the configuration manually.
 
