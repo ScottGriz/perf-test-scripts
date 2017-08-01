@@ -2,7 +2,7 @@
 
 ### DISCLAIMER
 
-The use of this toolkit is not _officially_ supported. Before using it, ensure you understand SSL/TLS configuration for CM and CDH and review this entire document. Also, make sure you pratice the use of the toolkit before using it in a critical environment.
+The use of this toolkit is not _officially_ supported. Before using it, ensure you understand SSL/TLS configuration for CM and CDH and review this entire doc ument. Also, make sure you pratice the use of the toolkit before using it in a critical environment.
 
 If problems happen, resort to the [online Cloudera Documentation](http://www.cloudera.com/content/cloudera/en/documentation/core/latest/topics/sg_encryption.html) and complete the configuration manually.
 
@@ -365,7 +365,7 @@ Once the `defaults.yaml` has been reviewed and configured correctly, you're read
          ```
          The user will be prompted for the credentials of the AD user with privileges to generate the signed certificates. The user name **must** be provided in the form `<DOMAIN>\<username>`.
 
-      3. __Use the toolkit to create a local CA and self-sign the certificates__
+      3. __Use the toolkit to create a local self-siged CA and issue the necessary certificates__
 
          **This option is very insecure and only recommended for tests**. _Do not use this in customers' environments._
          <p>Using this option the toolkit will create new Certificate Authority credentials (a private key and self-signed certificate) and will use it to sign all the other cluster certificates. The CA credentials are stored in the security warehouse used by the toolkit.
