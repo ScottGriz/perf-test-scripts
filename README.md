@@ -274,15 +274,15 @@ The remaining settings in the `defaults.yaml` file, described in this section, a
 * __CERT_ALT_DOMAIN_NAMES__ - Alternate domain names to be used for SAN certificates (comma separated list of domain names). An additional SAN entry will be specified for each host, for each domain in the list. The additional SAN entry in the certificate will have the form: `DNS:<host>.<alt_domain>`.
 <br>*Example*: `CERT_ALT_DOMAIN_NAMES: example.com,corp.example.com`
 
-* __CERT_ALT_NAMES_FILE__ - File containing SAN entries for specific hosts. One line per host with each line having the following format (the host name and the list of SAN entries are separated by a space):
+* __CERT_ALT_NAMES_FILE__ - File containing SAN entries for specific hosts. One line per host with each line having the following format (the host name FQDN and the list of SAN entries are separated by a space):
   ```
-  host_SHORT_name comma_separated_list_of_san_entries
+  host_FQDN_name comma_separated_list_of_san_entries
   ```
 Each SAN in the list must be either one of these forms: `DNS:fqdn` or `IP:ip_address`.
 <br>*Example*: `CERT_ALT_NAMES_FILE: /home/webadmin/alt_names.txt`
 <br>*Example of the alternate name file contents*:
   ```
-  host-1 DNS:cloudera-manager.example.com,IP:10.12.13.14
+  host-1.example.com DNS:cloudera-manager.example.com,IP:10.12.13.14
   ```
 
 * __ADD_SERVER_CERTS_TO_TRUSTSTORE__ - Indicates whether server certificates should be added to the truststore or not. We highly recommended that the default value (`NO`) is used. The only situation where it may be necessary to add server certificates to the truststore is when the certificates don't have the extended key usage attribute "_TLS Web Client Authentication_", which causes the TLS Level 3 configuration to fail. In these cases, this configuration property can be set to `YES` as a workaround.
